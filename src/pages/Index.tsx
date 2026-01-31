@@ -1,12 +1,40 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useRef, useCallback } from 'react';
+import SeasonalBackground from '@/components/seasons/SeasonalBackground';
+import IntroSection from '@/components/sections/IntroSection';
+import ProjectsSection from '@/components/sections/ProjectsSection';
+import AchievementsSection from '@/components/sections/AchievementsSection';
+import ContactSection from '@/components/sections/ContactSection';
+import useScrollProgress from '@/hooks/useScrollProgress';
 
 const Index = () => {
+  const { progress } = useScrollProgress();
+  const projectsRef = useRef<HTMLDivElement>(null);
+
+  const scrollToProjects = useCallback(() => {
+    projectsRef.current?.scrollIntoView({ behavior: 'smooth' });
+  }, []);
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="relative">
+      {/* Fixed Seasonal Background */}
+      <SeasonalBackground scrollProgress={progress} />
+
+      {/* Content Sections */}
+      <main className="relative z-10">
+        {/* Winter - Intro */}
+        <IntroSection onCTAClick={scrollToProjects} />
+
+        {/* Spring - Projects */}
+        <div ref={projectsRef}>
+          <ProjectsSection />
+        </div>
+
+        {/* Summer - Achievements */}
+        <AchievementsSection />
+
+        {/* Autumn - Contact */}
+        <ContactSection />
+      </main>
     </div>
   );
 };
