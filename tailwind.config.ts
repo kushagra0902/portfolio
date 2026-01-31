@@ -13,6 +13,10 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+        display: ['Playfair Display', 'Georgia', 'serif'],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -57,6 +61,39 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        // Seasonal colors
+        winter: {
+          sky: "hsl(var(--winter-sky))",
+          frost: "hsl(var(--winter-frost))",
+          ice: "hsl(var(--winter-ice))",
+          deep: "hsl(var(--winter-deep))",
+          snow: "hsl(var(--winter-snow))",
+          mist: "hsl(var(--winter-mist))",
+        },
+        spring: {
+          leaf: "hsl(var(--spring-leaf))",
+          blossom: "hsl(var(--spring-blossom))",
+          grass: "hsl(var(--spring-grass))",
+          sky: "hsl(var(--spring-sky))",
+          bark: "hsl(var(--spring-bark))",
+          petal: "hsl(var(--spring-petal))",
+        },
+        summer: {
+          sun: "hsl(var(--summer-sun))",
+          gold: "hsl(var(--summer-gold))",
+          sky: "hsl(var(--summer-sky))",
+          grass: "hsl(var(--summer-grass))",
+          warmth: "hsl(var(--summer-warmth))",
+          glow: "hsl(var(--summer-glow))",
+        },
+        autumn: {
+          leaf: "hsl(var(--autumn-leaf))",
+          amber: "hsl(var(--autumn-amber))",
+          rust: "hsl(var(--autumn-rust))",
+          bark: "hsl(var(--autumn-bark))",
+          gold: "hsl(var(--autumn-gold))",
+          warmth: "hsl(var(--autumn-warmth))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -65,20 +102,12 @@ export default {
       },
       keyframes: {
         "accordion-down": {
-          from: {
-            height: "0",
-          },
-          to: {
-            height: "var(--radix-accordion-content-height)",
-          },
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
         },
         "accordion-up": {
-          from: {
-            height: "var(--radix-accordion-content-height)",
-          },
-          to: {
-            height: "0",
-          },
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
         },
       },
       animation: {
