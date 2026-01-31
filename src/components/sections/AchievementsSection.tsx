@@ -68,10 +68,13 @@ const AchievementsSection = () => {
       <div className="max-w-4xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-summer-grass mb-4">
+          <h2 
+            className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 drop-shadow-lg"
+            style={{ textShadow: '0 4px 20px rgba(0,0,0,0.2)' }}
+          >
             Achievements
           </h2>
-          <p className="text-lg md:text-xl text-summer-grass/70 max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto drop-shadow">
             Milestones and recognitions along the journey
           </p>
         </div>
