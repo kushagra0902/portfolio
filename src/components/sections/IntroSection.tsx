@@ -20,21 +20,23 @@ const IntroSection = ({ onCTAClick }: IntroSectionProps) => {
       ref={sectionRef}
       className="relative min-h-screen flex flex-col items-center justify-center px-6"
     >
+      {/* Frost overlay for winter feel */}
+      <div className="absolute inset-0 bg-gradient-radial from-transparent via-transparent to-winter-frost/30 pointer-events-none" />
+
       {/* Content */}
       <div className="relative z-10 text-center max-w-4xl mx-auto">
         {/* Name */}
         <h1
-          className={`font-display text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 transition-all duration-1000 drop-shadow-lg ${
+          className={`font-display text-5xl md:text-7xl lg:text-8xl font-bold text-winter-deep mb-6 transition-all duration-1000 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}
-          style={{ textShadow: '0 4px 20px rgba(0,0,0,0.3)' }}
         >
           John Developer
         </h1>
 
         {/* Tagline */}
         <p
-          className={`text-xl md:text-2xl lg:text-3xl text-white/90 font-light mb-12 max-w-2xl mx-auto leading-relaxed transition-all duration-1000 delay-200 drop-shadow-md ${
+          className={`text-xl md:text-2xl lg:text-3xl text-winter-deep/80 font-light mb-12 max-w-2xl mx-auto leading-relaxed transition-all duration-1000 delay-200 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}
         >
@@ -50,7 +52,7 @@ const IntroSection = ({ onCTAClick }: IntroSectionProps) => {
           <Button
             onClick={onCTAClick}
             size="lg"
-            className="bg-white hover:bg-white/90 text-winter-deep px-10 py-6 text-lg font-medium rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
+            className="bg-winter-deep hover:bg-winter-deep/90 text-winter-snow px-10 py-6 text-lg font-medium rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
           >
             View My Work
           </Button>
@@ -63,8 +65,8 @@ const IntroSection = ({ onCTAClick }: IntroSectionProps) => {
           isVisible ? 'opacity-100' : 'opacity-0'
         }`}
       >
-        <div className="flex flex-col items-center text-white/80 animate-bounce">
-          <span className="text-sm font-medium mb-2 drop-shadow">Scroll to explore</span>
+        <div className="flex flex-col items-center text-winter-deep/60 animate-bounce">
+          <span className="text-sm font-medium mb-2">Scroll to explore</span>
           <ChevronDown className="w-6 h-6" />
         </div>
       </div>

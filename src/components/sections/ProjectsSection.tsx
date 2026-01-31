@@ -66,13 +66,10 @@ const ProjectsSection = () => {
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 
-            className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 drop-shadow-lg"
-            style={{ textShadow: '0 4px 20px rgba(0,0,0,0.25)' }}
-          >
+          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-spring-bark mb-4">
             Featured Projects
           </h2>
-          <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto drop-shadow">
+          <p className="text-lg md:text-xl text-spring-bark/70 max-w-2xl mx-auto">
             A collection of my recent work, from concept to deployment
           </p>
         </div>
