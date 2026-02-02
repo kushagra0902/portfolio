@@ -2,35 +2,11 @@ import { useRef, useEffect, useState } from 'react';
 import { Award, Trophy, Star, Medal } from 'lucide-react';
 const achievements = [{
   id: 1,
-  year: '2024',
-  title: 'AWS Solutions Architect Certification',
-  description: 'Achieved Professional level certification in cloud architecture and design patterns.',
+  year: '2025',
+  title: 'Inter IIT Tech Meet 14.0 Winner',
+  description: 'Achieved Gold Gedal in problem statement by Arista Networks.',
   icon: Award
-}, {
-  id: 2,
-  year: '2024',
-  title: 'Open Source Contributor Award',
-  description: 'Recognized for significant contributions to React ecosystem projects.',
-  icon: Star
-}, {
-  id: 3,
-  year: '2023',
-  title: 'Hackathon Grand Prize Winner',
-  description: 'First place at TechCrunch Disrupt hackathon for innovative AI solution.',
-  icon: Trophy
-}, {
-  id: 4,
-  year: '2023',
-  title: 'Google Cloud Professional',
-  description: 'Certified as a Google Cloud Professional Data Engineer.',
-  icon: Medal
-}, {
-  id: 5,
-  year: '2022',
-  title: 'Tech Lead Promotion',
-  description: 'Promoted to lead a team of 8 engineers on enterprise applications.',
-  icon: Award
-}];
+}, ];
 const AchievementsSection = () => {
   const [visibleItems, setVisibleItems] = useState<Set<number>>(new Set());
   const itemRefs = useRef<(HTMLDivElement | null)[]>([]);

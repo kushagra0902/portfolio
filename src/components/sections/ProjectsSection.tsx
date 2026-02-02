@@ -5,36 +5,26 @@ import { Button } from '@/components/ui/button';
 const projects = [
   {
     id: 1,
-    title: 'E-Commerce Platform',
-    description: 'A modern, scalable e-commerce solution with real-time inventory management and seamless payment integration.',
-    tags: ['React', 'Node.js', 'PostgreSQL', 'Stripe'],
-    github: '#',
-    demo: '#',
+    title: 'LIBR',
+    description: 'A p2p distributed censorship resilient forum',
+    tags: ['GoLang', 'libp2p', 'Computer Networks', 'Distributed Systems'],
+    github: 'https://github.com/libr-forum/libr',
   },
   {
     id: 2,
-    title: 'AI Content Generator',
-    description: 'An intelligent content generation tool powered by GPT-4, helping creators produce high-quality articles effortlessly.',
-    tags: ['Python', 'FastAPI', 'OpenAI', 'Redis'],
-    github: '#',
-    demo: '#',
+    title: 'LightUp',
+    description: 'A highly optimized content lookup system for windows',
+    tags: ['CPP', 'BM25', 'Inverted Indexing'],
+    github: 'https://github.com/1amKhush/DSA_project_spotlight',
   },
   {
     id: 3,
-    title: 'Real-Time Analytics Dashboard',
-    description: 'A comprehensive analytics platform with live data visualization and custom reporting capabilities.',
-    tags: ['TypeScript', 'D3.js', 'WebSocket', 'MongoDB'],
-    github: '#',
-    demo: '#',
+    title: 'Obscure',
+    description: 'A smart gallery allowing natural language queries',
+    tags: ['Python', 'Vector Databases', 'Deep Learning', 'Backend'],
+    
   },
-  {
-    id: 4,
-    title: 'Mobile Fitness App',
-    description: 'Cross-platform fitness tracking application with personalized workout plans and progress monitoring.',
-    tags: ['React Native', 'Firebase', 'TensorFlow'],
-    github: '#',
-    demo: '#',
-  },
+  
 ];
 
 const ProjectsSection = () => {
@@ -125,16 +115,6 @@ const ProjectsSection = () => {
                   <a href={project.github} target="_blank" rel="noopener noreferrer">
                     <Github className="w-4 h-4 mr-2" />
                     GitHub
-                  </a>
-                </Button>
-                <Button
-                  size="sm"
-                  className="bg-spring-leaf hover:bg-spring-leaf/90 text-white"
-                  asChild
-                >
-                  <a href={project.demo} target="_blank" rel="noopener noreferrer">
-                    <ExternalLink className="w-4 h-4 mr-2" />
-                    Live Demo
                   </a>
                 </Button>
               </div>
